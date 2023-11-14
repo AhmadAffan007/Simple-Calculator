@@ -1,0 +1,56 @@
+<DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Calculator</title>
+    </head>
+
+    <body>
+        <div class="divCal">
+            <h1 style="color: white;">Calculator</h1>
+            <form class=form1 name="form1" id="form1" method="post" action="save.php">
+                <label><b>Number 1:</b></label>
+                <input type="text" id="num1" name="num1">
+                <label><b>Number 2:</b></label>
+                <input type="text" id="num2" name="num2">
+                <label><b>Result :</b></label>
+                <input class="result" type="text" id="result" name="result">
+                <div class="buttons">
+                    <input type="button" value="Add" onclick="Addition()">
+                    <input type="button" value="Subtract" onclick="Subtraction()">
+                    <input type="button" value="Multiply" onclick="Multiplication()">
+                    <input type="button" value="Divide" onclick="Division()">
+                </div>
+            </form>
+        </div>   
+    </body>
+
+    <script>
+        function Addition(){
+            const n1=parseFloat(document.forms["form1"]["num1"].value);
+            const n2=parseFloat(document.forms["form1"]["num2"].value);
+            const addition=n1+n2
+            document.forms["form1"]["result"].value = addition;
+        }
+        function Subtraction(){
+            const n1=parseFloat(document.forms["form1"]["num1"].value);
+            const n2=parseFloat(document.forms["form1"]["num2"].value);
+            const subtraction=n1-n2
+            document.forms["form1"]["result"].value = subtraction;
+        }
+        function Multiplication(){
+            const n1=parseFloat(document.forms["form1"]["num1"].value);
+            const n2=parseFloat(document.forms["form1"]["num2"].value);
+            const multi=n1*n2
+            document.forms["form1"]["result"].value = multi;
+        }
+        function Division(){
+            const n1=parseFloat(document.forms["form1"]["num1"].value);
+            const n2=parseFloat(document.forms["form1"]["num2"].value);
+            const division=n1/n2
+            document.forms["form1"]["result"].value = division;
+        }
+    </script>
+</html>
+</DOCTYPE>
